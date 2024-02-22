@@ -6,7 +6,7 @@
 /*   By: hikaru <hikaru@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/14 16:12:35 by hikaru            #+#    #+#             */
-/*   Updated: 2023/12/16 14:23:08 by hikaru           ###   ########.fr       */
+/*   Updated: 2024/02/22 16:58:56 by hikaru           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,12 @@ public:
 	}
 	~Array() { delete[] (_array); };
 	
-	T &operator[](unsigned int const &index) { if (index >= _size) throw OutOfRangeException(); return _array[index]; };
-	// T &operator[](unsigned int const &index) const { if (index >= _size) throw OutOfRangeException(); return _array[index]; };
+	T &operator[](unsigned int const &index)
+	{
+		if (index >= _size)
+			throw OutOfRangeException();
+		return _array[index];
+	}
 	
 	unsigned int size() const { return _size; }
 	
